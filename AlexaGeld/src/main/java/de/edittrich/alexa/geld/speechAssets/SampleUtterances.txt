@@ -1,0 +1,29 @@
+VerifyConfirmatationCodeIntent mein bestätigungscode ist {requestConfirmationCode}
+VerifyConfirmatationCodeIntent bestätigungscode {requestConfirmationCode}
+VerifyConfirmatationCodeIntent {requestConfirmationCode}
+WhatsMyBalanceIntent           was ist mein kontostand
+WhatsMyBalanceIntent           nach dem kontostand
+WhatsMyBalanceIntent           nach kontostand
+WhatsMyBalanceIntent           kontostand
+WhatsMyTransactionsIntent      was sind meine buchungen
+WhatsMyTransactionsIntent      was sind meine buchungen vom {requestDate}
+WhatsMyTransactionsIntent      was sind meine buchungen von {requestDate}
+WhatsMyTransactionsIntent      nach den buchungen
+WhatsMyTransactionsIntent      nach den buchungen vom {requestDate}
+WhatsMyTransactionsIntent      nach den buchungen von {requestDate}
+WhatsMyTransactionsIntent      nach buchungen
+WhatsMyTransactionsIntent      nach buchungen vom {requestDate}
+WhatsMyTransactionsIntent      nach buchungen von {requestDate}
+WhatsMyTransactionsIntent      buchungen
+WhatsMyTransactionsIntent      buchungen vom {requestDate}
+WhatsMyTransactionsIntent      buchungen von {requestDate}
+WhatsMyFigoBalanceIntent       was ist der kontostand von figo
+WhatsMyFigoBalanceIntent       nach dem kontostand von figo
+WhatsMyFigoBalanceIntent       nach kontostand von figo
+WhatsMyFigoBalanceIntent       nach figo
+WhatsMyFigoBalanceIntent       figo
+WhatsMyHbciBalanceIntent       was ist der kontostand von {requestCustomerId}
+WhatsMyHbciBalanceIntent       nach dem kontostand von {requestCustomerId}
+WhatsMyHbciBalanceIntent       nach kontostand von {requestCustomerId}
+WhatsMyHbciBalanceIntent       nach {requestCustomerId}
+WhatsMyHbciBalanceIntent       {requestCustomerId}

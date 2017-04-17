@@ -1,0 +1,37 @@
+{
+  "intents": [
+    {
+      "slots": [
+        {
+          "name": "requestConfirmationCode",
+          "type": "AMAZON.FOUR_DIGIT_NUMBER"
+        }
+      ],
+      "intent": "VerifyConfirmatationCodeIntent"
+    },
+    {
+      "intent": "WhatsMyBalanceIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "requestDate",
+          "type": "AMAZON.DATE"
+        }
+      ],
+      "intent": "WhatsMyTransactionsIntent"
+    },
+    {
+      "intent": "WhatsMyFigoBalanceIntent"
+    },
+    {
+	  "slots": [
+        {
+          "name": "requestCustomerId",
+          "type": "CUSTOMERID"
+        }
+      ],
+      "intent": "WhatsMyHbciBalanceIntent"
+    }
+  ]
+}

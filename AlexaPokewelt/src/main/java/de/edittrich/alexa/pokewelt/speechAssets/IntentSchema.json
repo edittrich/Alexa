@@ -1,0 +1,31 @@
+{
+  "intents": [
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "requestPokemon",
+          "type": "POKEMON"
+        }
+      ],
+      "intent": "WhatsPokemonIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "requestPokemonType",
+          "type": "POKEMONTYPE"
+        }
+      ],
+      "intent": "WhatsPokemonTypeIntent"
+    },
+    {
+      "intent": "WhatsPokemonGoIntent"
+    },
+    {
+      "intent": "WhatsFavPokemonIntent"
+    }
+  ]
+}

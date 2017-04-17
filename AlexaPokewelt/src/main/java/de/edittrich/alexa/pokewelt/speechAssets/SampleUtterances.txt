@@ -1,0 +1,29 @@
+AMAZON.StopIntent      stop
+AMAZON.StopIntent      ruhe
+AMAZON.StopIntent      laber nicht
+AMAZON.StopIntent      schnauze
+AMAZON.StopIntent      fresse
+
+WhatsPokemonIntent     nach dem pokemon {requestPokemon}
+WhatsPokemonIntent     nach pokemon {requestPokemon}
+WhatsPokemonIntent     nach {requestPokemon}
+WhatsPokemonIntent     erzähle von {requestPokemon}
+WhatsPokemonIntent     {requestPokemon}
+WhatsPokemonIntent     was ist {requestPokemon}
+
+WhatsPokemonTypeIntent nach pokemons vom typ {requestPokemonType}
+WhatsPokemonTypeIntent nach dem typ {requestPokemonType}
+WhatsPokemonTypeIntent nach typ {requestPokemonType}
+WhatsPokemonTypeIntent typ {requestPokemonType}
+WhatsPokemonTypeIntent erzähle von pokemons vom typ {requestPokemonType}
+WhatsPokemonTypeIntent pokemons vom typ {requestPokemonType}
+WhatsPokemonTypeIntent welche pokemons gibt es vom typ {requestPokemonType}
+
+WhatsPokemonGoIntent   nach der app pokemon go
+WhatsPokemonGoIntent   nach pokemon go
+WhatsPokemonGoIntent   pokemon go
+WhatsPokemonGoIntent   was ist pokemon go
+
+WhatsFavPokemonIntent  nach deinem lieblings pokemon
+WhatsFavPokemonIntent  nach lieblings pokemon
+WhatsFavPokemonIntent  was ist dein lieblings pokemon
