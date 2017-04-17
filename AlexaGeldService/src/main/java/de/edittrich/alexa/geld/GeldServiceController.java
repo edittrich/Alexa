@@ -81,7 +81,6 @@ public class GeldServiceController {
 
             GVRSaldoReq result = (GVRSaldoReq) hbciJob.getJobResult();
             if (result.isOK()) {
-            	//return new ResponseEntity<String>(((double)result.getEntries()[0].ready.value.getLongValue())/100 + "", HttpStatus.OK);
             	String cashAccountBalance = Double.toString((double) result.getEntries()[0].ready.value.getLongValue() / 100);
             	return new ResponseEntity<String>(cashAccountBalance.substring(cashAccountBalance.length() - 5), HttpStatus.OK);
             } else {
