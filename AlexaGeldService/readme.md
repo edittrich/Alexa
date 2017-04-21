@@ -1,8 +1,10 @@
 http://localhost:8080/confirmationCode?customerId=Erik&confirmationCode=1234
 http://localhost:8080/cashAccountBalance?customerId=Erik
+http://localhost:8080/cashAccountBalance?customerId=Tania
 
 http://edittrich.de:38080/confirmationCode?customerId=Erik&confirmationCode=1234
 http://edittrich.de:38080/cashAccountBalance?customerId=Erik
+http://edittrich.de:38080/cashAccountBalance?customerId=Tania
 
 https://github.com/hbci4j/hbci4java/
 

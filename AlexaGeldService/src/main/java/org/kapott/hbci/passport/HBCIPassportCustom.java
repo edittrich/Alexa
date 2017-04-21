@@ -28,7 +28,7 @@ public class HBCIPassportCustom extends HBCIPassportPinTan {
 	    
 	    this.setProxy("");
 	    this.setProxyUser(""); 
-	    this.setProxyPass(""); 
+	    this.setProxyPass("");
 	  } 
 
 	  public void saveChanges() {		  
