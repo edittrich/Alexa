@@ -25,10 +25,6 @@ public class HBCIPassportCustom extends HBCIPassportPinTan {
 		this.setCountry("DE");
 		this.setCheckCert(false);
 		this.setFilterType("Base64");
-
-		this.setProxy("");
-		this.setProxyUser("");
-		this.setProxyPass("");
 	}
 
 	public void saveChanges() {

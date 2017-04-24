@@ -44,7 +44,7 @@ public class GeldServiceController {
     public ResponseEntity<String> cashAccountBalance(@RequestParam("customerId") String customerId) {
         Properties properties = new Properties(); 
         properties.put("client.passport.default","PinTan");
-        properties.put("client.passport.PinTan.init","1");
+        properties.put("client.passport.PinTan.init","0");
         properties.put("log.loglevel.default",Integer.toString(HBCIUtils.LOG_NONE));
         
         properties.put("client.passport.pintan.custom.blz","1");
@@ -62,7 +62,7 @@ public class GeldServiceController {
 	        HBCIUtils.setParam("client.passport.pintan.custom.port","443");
 	        HBCIUtils.setParam("client.passport.pintan.custom.hbciversion","300");
 	        HBCIUtils.setParam("client.passport.pintan.custom.userid","x");
-	        HBCIUtils.setParam("client.passport.pintan.custom.pin","x");
+	        HBCIUtils.setParam("client.passport.pintan.custom.pin","y");
 	        HBCIUtils.setParam("client.passport.pintan.custom.currenttanmethod","900");
         } else if (customerId.equals("Tania")) {
             HBCIUtils.setParam("client.passport.pintan.custom.blz","25010030");    
@@ -70,7 +70,7 @@ public class GeldServiceController {
 	        HBCIUtils.setParam("client.passport.pintan.custom.port","443");
 	        HBCIUtils.setParam("client.passport.pintan.custom.hbciversion","300");
 	        HBCIUtils.setParam("client.passport.pintan.custom.userid","x");
-	        HBCIUtils.setParam("client.passport.pintan.custom.pin","x");
+	        HBCIUtils.setParam("client.passport.pintan.custom.pin","y");
 	        HBCIUtils.setParam("client.passport.pintan.custom.currenttanmethod","901");	        
         } else {
             HBCIUtils.setParam("client.passport.pintan.custom.blz","1");    
