@@ -1,0 +1,10 @@
+WordAIntent {WordA}
+WordBIntent {WordA} {WordB}
+WordCIntent {WordA} {WordB} {WordC}
+WordDIntent {WordA} {WordB} {WordC} {WordD}
+WordEIntent {WordA} {WordB} {WordC} {WordD} {WordE}
+WordFIntent {WordA} {WordB} {WordC} {WordD} {WordE} {WordF}
+WordGIntent {WordA} {WordB} {WordC} {WordD} {WordE} {WordF} {WordG}
+WordHIntent {WordA} {WordB} {WordC} {WordD} {WordE} {WordF} {WordG} {WordH}
+WordIIntent {WordA} {WordB} {WordC} {WordD} {WordE} {WordF} {WordG} {WordH} {WordI} 
+WordJIntent {WordA} {WordB} {WordC} {WordD} {WordE} {WordF} {WordG} {WordH} {WordI} {WordJ}

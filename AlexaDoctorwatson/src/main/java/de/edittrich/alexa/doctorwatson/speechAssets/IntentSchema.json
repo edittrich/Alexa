@@ -1,0 +1,274 @@
+{
+  "intents": [
+    {
+      "slots": [
+        {
+          "name": "WordA",
+          "type": "LIST_OF_WORDS"
+        }
+      ],
+      "intent": "WordAIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "WordA",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordB",
+          "type": "LIST_OF_WORDS"
+        }
+      ],
+      "intent": "WordBIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "WordA",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordB",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordC",
+          "type": "LIST_OF_WORDS"
+        }
+      ],
+      "intent": "WordCIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "WordA",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordB",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordC",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordD",
+          "type": "LIST_OF_WORDS"
+        }
+      ],
+      "intent": "WordDIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "WordA",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordB",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordC",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordD",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordE",
+          "type": "LIST_OF_WORDS"
+        }
+      ],
+      "intent": "WordEIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "WordA",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordB",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordC",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordD",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordE",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordF",
+          "type": "LIST_OF_WORDS"
+        }
+      ],
+      "intent": "WordFIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "WordA",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordB",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordC",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordD",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordE",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordF",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordG",
+          "type": "LIST_OF_WORDS"
+        }
+      ],
+      "intent": "WordGIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "WordA",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordB",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordC",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordD",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordE",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordF",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordG",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordH",
+          "type": "LIST_OF_WORDS"
+        }
+      ],
+      "intent": "WordHIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "WordA",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordB",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordC",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordD",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordE",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordF",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordG",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordH",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordI",
+          "type": "LIST_OF_WORDS"
+        }
+      ],
+      "intent": "WordIIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "WordA",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordB",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordC",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordD",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordE",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordF",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordG",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordH",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordI",
+          "type": "LIST_OF_WORDS"
+        },
+        {
+          "name": "WordJ",
+          "type": "LIST_OF_WORDS"
+        }
+      ],
+      "intent": "WordJIntent"
+    }
+  ]
+}
