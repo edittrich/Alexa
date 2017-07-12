@@ -3,7 +3,7 @@
     {
       "slots": [
         {
-          "name": "requestConfirmationCode",
+          "name": "OBFUSCATE_requestConfirmationCode",
           "type": "AMAZON.FOUR_DIGIT_NUMBER"
         }
       ],

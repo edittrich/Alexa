@@ -1,6 +1,6 @@
-VerifyConfirmatationCodeIntent mein bestätigungscode ist {requestConfirmationCode}
-VerifyConfirmatationCodeIntent bestätigungscode {requestConfirmationCode}
-VerifyConfirmatationCodeIntent {requestConfirmationCode}
+VerifyConfirmatationCodeIntent mein bestätigungscode ist {OBFUSCATE_requestConfirmationCode}
+VerifyConfirmatationCodeIntent bestätigungscode {OBFUSCATE_requestConfirmationCode}
+VerifyConfirmatationCodeIntent {OBFUSCATE_requestConfirmationCode}
 WhatsMyBalanceIntent           was ist mein kontostand
 WhatsMyBalanceIntent           nach dem kontostand
 WhatsMyBalanceIntent           nach kontostand

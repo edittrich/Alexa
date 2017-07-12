@@ -17,6 +17,7 @@ import com.nimbusds.jose.JWSAlgorithm;
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.source.ImmutableJWKSet;
 import com.nimbusds.jose.jwk.source.JWKSource;
+import com.nimbusds.jose.jwk.source.RemoteJWKSet;
 import com.nimbusds.jose.proc.JWSKeySelector;
 import com.nimbusds.jose.proc.JWSVerificationKeySelector;
 import com.nimbusds.jose.proc.SecurityContext;
@@ -27,6 +28,7 @@ import com.nimbusds.jwt.proc.DefaultJWTProcessor;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
+import java.net.URL;
 import java.util.Map;
 
 import org.apache.http.HttpResponse;
@@ -43,7 +45,7 @@ public class GeldSpeechlet implements Speechlet {
     private static final Logger log = LoggerFactory.getLogger(GeldSpeechlet.class);
 
     private static final String REQUESTCUSTOMERID_SLOT = "requestCustomerId";
-    private static final String REQUESTCONFIRMATIONCODE_SLOT = "requestConfirmationCode";
+    private static final String REQUESTCONFIRMATIONCODE_SLOT = "OBFUSCATE_requestConfirmationCode";
     private static final String REQUESTDATE_SLOT = "requestDate";
     
     private static final String urlCashAccounts = "https://simulator-api.db.com:443/gw/dbapi/v1/cashAccounts";
@@ -51,7 +53,7 @@ public class GeldSpeechlet implements Speechlet {
     private static final String urlCashAccountsFigo = "https://api.figo.me/rest/accounts/A1.1";
     private static final String urlConfirmationCode = "http://edittrich.de:38080/confirmationCode";
     private static final String urlTransactions = "https://simulator-api.db.com:443/gw/dbapi/v1/transactions";
-    private static final String urlUserInfo = "https://simulator-api.db.com:443/gw/dbapi/v1/userInfo";
+    private static final String urlUserInfo = "https://simulator-api.db.com/gw/oidc/userinfo";
    
 	private Boolean confirmationCodeVerified;
 	private Boolean accessTokenVerified;
@@ -156,11 +158,9 @@ public class GeldSpeechlet implements Speechlet {
 			try {
 				ConfigurableJWTProcessor<SecurityContext> jwtProcessor = new DefaultJWTProcessor<SecurityContext>();
 				
-				//JWKSource<SecurityContext> keySource = new RemoteJWKSet<SecurityContext>(new URL("https://simulator-api.db.com/gw/oidc/jwk"));
-				JWKSet jwkSet = JWKSet.load(new File("dbapi.json"));
-				JWKSource<SecurityContext> keySource = new ImmutableJWKSet<SecurityContext>(jwkSet);
+				JWKSource<SecurityContext> keySource = new RemoteJWKSet<SecurityContext>(new URL("https://simulator-api.db.com/gw/oidc/jwk"));
 			
-				JWSAlgorithm expectedJWSAlg = JWSAlgorithm.RS256;
+				JWSAlgorithm expectedJWSAlg = JWSAlgorithm.RS512;
 				JWSKeySelector<SecurityContext> keySelector = new JWSVerificationKeySelector<SecurityContext>(expectedJWSAlg, keySource);
 				
 				jwtProcessor.setJWSKeySelector(keySelector);
@@ -191,7 +191,7 @@ public class GeldSpeechlet implements Speechlet {
     		String output = getRestResponse(urlUserInfo);
     		
     		JSONObject userInfo = new JSONObject(output);
-    		String customerId = userInfo.getString("firstName") + userInfo.getString("lastName");
+    		String customerId = userInfo.getString("sub");
         	    		          	
 			try {
 				CloseableHttpClient httpClient = HttpClients.createDefault();
@@ -227,7 +227,7 @@ public class GeldSpeechlet implements Speechlet {
 	
 		JSONArray cashAccountsArray = new JSONArray(output);
 		JSONObject cashAccountObject = cashAccountsArray.getJSONObject(0);		
-		Double cashAccountBalance = cashAccountObject.getDouble("balance");
+		Double cashAccountBalance = cashAccountObject.getDouble("currentBalance");
 		
 		String speechText = "Dein Kontostand betr\u00E4gt " + cashAccountBalance + " Euro.";
 		String repromptText = "Wie kann ich Dir helfen?";
@@ -250,8 +250,14 @@ public class GeldSpeechlet implements Speechlet {
         }
         
         String speechText = "";
+        
+		String output = getRestResponse(urlCashAccounts);
 		
-		String output = getRestResponse(urlTransactions);
+		JSONArray cashAccountsArray = new JSONArray(output);
+		JSONObject cashAccountObject = cashAccountsArray.getJSONObject(0);		
+		String cashAccountIban = cashAccountObject.getString("iban");
+		
+		output = getRestResponse(urlTransactions + "?iban=" + cashAccountIban);
 		
 		double transactionAmount;
 		JSONObject transactionObject;
@@ -267,7 +273,7 @@ public class GeldSpeechlet implements Speechlet {
 			
  		    transactionAmount = transactionObject.getDouble("amount");
  		    transactionCounterPartyName = transactionObject.getString("counterPartyName");
-		 	transactionUsage = transactionObject.getString("usage");
+		 	transactionUsage = transactionObject.getString("paymentReference");
 		 	transactionBookingDate = transactionObject.getString("bookingDate");
 		 	
 		 	if ((requestDate.equals("")) || (requestDate.equals(transactionBookingDate))) {
