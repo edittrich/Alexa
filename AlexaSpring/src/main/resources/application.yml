@@ -1,0 +1,14 @@
+server:
+  port: 8443
+  ssl:
+    key-store: keystore.p12
+    key-store-password: mypassword    
+    keyStoreType: PKCS12    
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    de.edittrich: DEBUG
+    
+application:
+  id: amzn1.ask.skill.c8402c05-714f-4fb4-8ad9-17dc9cd7e95c

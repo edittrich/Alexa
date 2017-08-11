@@ -1,0 +1,7 @@
+HelloWorldIntent sag hallo
+HelloWorldIntent sag hallo welt
+HelloWorldIntent hallo
+HelloWorldIntent sag hi
+HelloWorldIntent sag hi welt
+HelloWorldIntent hi
+HelloWorldIntent wie geht es
