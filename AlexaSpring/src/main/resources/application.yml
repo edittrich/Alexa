@@ -9,6 +9,9 @@ logging:
   level:
     org.springframework.web: DEBUG
     de.edittrich: DEBUG
+    com.amazon: DEBUG
     
 application:
   id: amzn1.ask.skill.c8402c05-714f-4fb4-8ad9-17dc9cd7e95c
+  disableSignature: false
+  timestampTolerance: 150

@@ -4,3 +4,5 @@ https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/deploy
 
 http://www.thehecklers.org/2017/03/06/create-alexa-skill-spring-boot-cf/
 https://raw.githubusercontent.com/qaware/iot-hessen-amazon-echo/master/slides.pdf
+
+curl -v -d "@alexa.json" -H "Content-Type: application/json" https://edittrich.de:8443/alexa

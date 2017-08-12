@@ -2,7 +2,6 @@ package de.edittrich.alexa.spring;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import com.amazon.speech.slu.Intent;
@@ -23,9 +22,6 @@ import com.amazon.speech.ui.SimpleCard;
  */
 @Component
 public class HelloWorldSpeechlet implements Speechlet {
-	
-	@Value("${application.id}")
-    private String applicationId;
 	
     private static final Logger log = LoggerFactory.getLogger(HelloWorldSpeechlet.class);
 
@@ -50,7 +46,7 @@ public class HelloWorldSpeechlet implements Speechlet {
             throws SpeechletException {
         log.info("onIntent requestId={}, sessionId={}, applicationId={}", request.getRequestId(),
                 session.getSessionId(), session.getApplication().getApplicationId());
-
+        
         Intent intent = request.getIntent();
         String intentName = (intent != null) ? intent.getName() : null;
 
