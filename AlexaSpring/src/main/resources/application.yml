@@ -1,9 +1,9 @@
 server:
   port: 8443
   ssl:
-    key-store: keystore.p12
+    key-store: edittrich.jks
     key-store-password: mypassword    
-    keyStoreType: PKCS12    
+    keyStoreType: JKS    
 
 logging:
   level:
